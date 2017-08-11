@@ -11,7 +11,7 @@ namespace Bonus\Payments\Bonus\Code\Models;
 defined('KAZIST') or exit('Not Kazist Framework');
 
 use Kazist\KazistFactory;
-use Bonus\Payments\Code\Models\PaymentsModel;
+use Payments\Payments\Code\Models\PaymentsModel;
 use Kazist\Service\Database\Query;
 
 /**

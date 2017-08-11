@@ -18,9 +18,9 @@ namespace Bonus\Payments\Bonus\Code\Controllers;
 defined('KAZIST') or exit('Not Kazist Framework');
 
 use Bonus\Payments\Bonus\Code\Models\BonusModel;
-use Bonus\Payments\Code\Controllers\PaymentsController;
+use Payments\Payments\Code\Controllers\PaymentsController AS BasePaymentsController;
 
-class BonusController extends PaymentsController {
+class BonusController extends BasePaymentsController {
 
     public function notifyAction() {
 
