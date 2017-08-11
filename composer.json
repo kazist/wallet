@@ -15,6 +15,5 @@
     ],
     "require": {
         "kazist/payments": "@stable",
-        "kazist/accounting": "@stable"
     }
 }
