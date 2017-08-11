@@ -13,14 +13,14 @@
  * @author sbc
  */
 
-namespace Bonus\Payments\Bonus\Code\Controllers;
+namespace Bonus\Payments\Code\Controllers;
 
 defined('KAZIST') or exit('Not Kazist Framework');
 
-use Bonus\Payments\Bonus\Code\Models\BonusModel;
+use Bonus\Payments\Code\Models\BonusModel;
 use Payments\Payments\Code\Controllers\PaymentsController AS BasePaymentsController;
 
-class BonusController extends BasePaymentsController {
+class PaymentsController extends BasePaymentsController {
 
     public function notifyAction() {
 

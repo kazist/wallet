@@ -1,10 +1,10 @@
 {
     "frontend": [{
-            "title": "Bonus Return",
-            "description": "Bonus Return.",
-            "controller": "Bonus\\Payments\\Bonus\\Code\\Controllers\\BonusController::returnAction",
-            "unique_name": "bonus.payments.bonus.return",
-            "route": "bonus/payments/bonus/return",
+            "title": "Bonus Payments Return",
+            "description": "Bonus Payments Return.",
+            "controller": "Bonus\\Payments\\Code\\Controllers\\BonusController::returnAction",
+            "unique_name": "bonus.payments.return",
+            "route": "bonus/payments/return",
             "permissions": "can_view, can_viewown",
             "arguments": "",
             "keywords": "return, bonus",
@@ -13,11 +13,11 @@
             "login_required": 0
 
         }, {
-            "title": "Bonus Cancelled",
-            "description": "Bonus Cancelled",
-            "controller": "Bonus\\Payments\\Bonus\\Code\\Controllers\\BonusController::cancelAction",
-            "unique_name": "bonus.payments.bonus.cancel",
-            "route": "bonus/payments/bonus/cancel",
+            "title": "Bonus Payments Cancelled",
+            "description": "Bonus Payments Cancelled",
+            "controller": "Bonus\\Payments\\Code\\Controllers\\BonusController::cancelAction",
+            "unique_name": "bonus.payments.cancel",
+            "route": "bonus/payments/cancel",
             "permissions": "can_view, can_viewown",
             "arguments": {
                 "id": null
@@ -27,11 +27,11 @@
             "changefreq": "weekly",
             "login_required": 0
         }, {
-            "title": "Bonus Notify",
-            "description": "Bonus Notify",
-            "controller": "Bonus\\Payments\\Bonus\\Code\\Controllers\\BonusController::notifyAction",
-            "unique_name": "bonus.payments.bonus.notify",
-            "route": "bonus/payments/bonus/notify",
+            "title": "Bonus Payments Notify",
+            "description": "Bonus Payments Notify",
+            "controller": "Bonus\\Payments\\Code\\Controllers\\BonusController::notifyAction",
+            "unique_name": "bonus.payments.notify",
+            "route": "bonus/payments/notify",
             "permissions": "can_view, can_viewown",
             "arguments": {
                 "id": null
@@ -44,9 +44,9 @@
     "backend": [{
             "title": "General Tasks",
             "description": "General Tasks.",
-            "controller": "Bonus\\Payments\\Bonus\\Code\\Controllers\\Admin\\BonusController::taskAction",
-            "unique_name": "admin.bonus.payments.bonus.task",
-            "route": "admin/bonus/payments/bonus/task",
+            "controller": "Bonus\\Payments\\Code\\Controllers\\Admin\\BonusController::taskAction",
+            "unique_name": "admin.bonus.payments.task",
+            "route": "admin/bonus/payments/task",
             "permissions": "can_add, can_write, can_writeown",
             "arguments": "",
             "keywords": "bonus, task",
@@ -58,12 +58,12 @@
                 "ADMIN": ["can_add", "can_write", "can_writeown"]
             }
         }, {
-            "title": "Bonus List",
-            "description": "Management of Bonus.",
-            "controller": "Bonus\\Payments\\Bonus\\Code\\Controllers\\Admin\\BonusController::indexAction",
+            "title": "Bonus Payments List",
+            "description": "Management of Bonus Payments.",
+            "controller": "Bonus\\Payments\\Code\\Controllers\\Admin\\BonusController::indexAction",
             "permissions": "can_view, can_viewown",
-            "unique_name": "admin.bonus.payments.bonus",
-            "route": "admin/bonus/payments/bonus",
+            "unique_name": "admin.bonus.payments",
+            "route": "admin/bonus/payments",
             "arguments": "",
             "keywords": "cron, list",
             "priority": "0.5",
@@ -74,11 +74,11 @@
                 "ADMIN": ["can_view", "can_viewown"]
             }
         }, {
-            "title": "Bonus Detail: {{ item.name }}",
-            "description": "Bonus Detail: {{ item.name }}",
-            "controller": "Bonus\\Payments\\Bonus\\Code\\Controllers\\Admin\\BonusController::detailAction",
-            "unique_name": "admin.bonus.payments.bonus.detail",
-            "route": "admin/bonus/payments/bonus/detail/{id}",
+            "title": "Bonus Payments Detail: {{ item.name }}",
+            "description": "Bonus Payments Detail: {{ item.name }}",
+            "controller": "Bonus\\Payments\\Code\\Controllers\\Admin\\BonusController::detailAction",
+            "unique_name": "admin.bonus.payments.detail",
+            "route": "admin/bonus/payments/detail/{id}",
             "permissions": "can_view, can_viewown",
             "arguments": {
                 "id": null
@@ -92,11 +92,11 @@
                 "ADMIN": ["can_view", "can_viewown"]
             }
         }, {
-            "title": "Bonus Delete: {{ item.name }}",
-            "description": "Bonus Delete: {{ item.name }}",
-            "controller": "Bonus\\Payments\\Bonus\\Code\\Controllers\\Admin\\BonusController::deleteAction",
-            "unique_name": "admin.bonus.payments.bonus.delete",
-            "route": "admin/bonus/payments/bonus/delete/{id}",
+            "title": "Bonus Payments Delete: {{ item.name }}",
+            "description": "Bonus Payments Delete: {{ item.name }}",
+            "controller": "Bonus\\Payments\\Code\\Controllers\\Admin\\BonusController::deleteAction",
+            "unique_name": "admin.bonus.payments.delete",
+            "route": "admin/bonus/payments/delete/{id}",
             "permissions": "can_delete, can_deleteown",
             "arguments": {
                 "id": null

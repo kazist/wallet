@@ -11,7 +11,7 @@
                                 "items": [
                                     {
                                         "group": {
-                                            "name": "Bonus Detail",
+                                            "name": "Bonus Payments Detail",
                                             "unique_name": "bonus_detail",
                                             "has_title": null,
                                             "user_right": null,
@@ -289,7 +289,7 @@
         }
     ],
     "primarykey": "id",
-    "table_name": "bonus_payments_bonus",
+    "table_name": "bonus_payments",
     "table_alias": "fpb",
     "foreignkey": "",
     "renamedfields": "",
@@ -306,9 +306,9 @@
     "right_field": "",
     "query": {
         "from": {
-            "table": "Bonus\\Payments\\Bonus\\Code\\Tables\\Bonus",
+            "table": "Bonus\\Payments\\Code\\Tables\\Bonus",
             "alias": "fpb",
-            "name": "#__bonus_payments_bonus"
+            "name": "#__bonus_payments"
         },
         "select": [
             "fpb.id",

@@ -13,12 +13,12 @@
  * @author sbc
  */
 
-namespace Bonus\Payments\Bonus\Code\Controllers\Admin;
+namespace Bonus\Payments\Code\Controllers\Admin;
 
 defined('KAZIST') or exit('Not Kazist Framework');
 
 use Payments\Payments\Code\Controllers\PaymentsController AS BasePaymentsController;
 
-class BonusController extends BasePaymentsController {
+class PaymentsController extends BasePaymentsController {
     
 }

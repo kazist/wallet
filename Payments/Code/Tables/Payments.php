@@ -1,17 +1,17 @@
 <?php
 
-namespace Bonus\Payments\Bonus\Code\Tables;
+namespace Bonus\Payments\Code\Tables;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Bonus
  *
- * @ORM\Table(name="bonus_payments_bonus")
+ * @ORM\Table(name="bonus_payments")
  * @ORM\Entity
  * @ORM\HasLifecycleCallbacks
  */
-class Bonus extends \Kazist\Table\BaseTable {
+class Payments extends \Kazist\Table\BaseTable {
 
     /**
      * @var integer

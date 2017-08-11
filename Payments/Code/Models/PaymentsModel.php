@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace Bonus\Payments\Bonus\Code\Models;
+namespace Bonus\Payments\Code\Models;
 
 defined('KAZIST') or exit('Not Kazist Framework');
 
@@ -19,7 +19,7 @@ use Kazist\Service\Database\Query;
  *
  * @author sbc
  */
-class BonusModel extends PaymentsModel {
+class PaymentsModel extends PaymentsModel {
 
     public $payment_code = '';
 
@@ -74,7 +74,7 @@ class BonusModel extends PaymentsModel {
 
         $query = new Query();
         $query->select('SUM(fg.debit) as total');
-        $query->from('#__bonus_transactions', 'fg');
+        $query->from('#__payments_transactions', 'fg');
         $query->where('fg.user_id=:user_id');
         $query->setParameter('user_id', $payment->user_id);
 
@@ -90,7 +90,7 @@ class BonusModel extends PaymentsModel {
 
         $query = new Query();
         $query->select('SUM(fg.credit) as total');
-        $query->from('#__bonus_transactions', 'fg');
+        $query->from('#__payments_transactions', 'fg');
         $query->where('fg.user_id=:user_id');
         $query->setParameter('user_id', $payment->user_id);
 

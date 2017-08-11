@@ -1,5 +1,5 @@
-Bonus\Payments\Bonus\Code\Tables\Bonus:
-  table: bonus_payments_bonus
+Bonus\Payments\Code\Tables\Payments:
+  table: bonus_payments
   type: entity
   id:
     id:

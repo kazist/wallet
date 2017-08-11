@@ -1,8 +1,8 @@
 {
-    "name": "bonus",
-    "title": "Bonus List",
-    "explanation": "Bonus List",
-    "description": "Bonus List",
+    "name": "payments",
+    "title": "Payments List",
+    "explanation": "Payments List",
+    "description": "Payments List",
     "version": 2,
     "has_view": "1",
     "tie_field": "0",
