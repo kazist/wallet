@@ -11,7 +11,7 @@ namespace Bonus\Payments\Code\Models;
 defined('KAZIST') or exit('Not Kazist Framework');
 
 use Kazist\KazistFactory;
-use Payments\Payments\Code\Models\PaymentsModel;
+use Payments\Payments\Code\Models\PaymentsModel AS BasePaymentsModel;
 use Kazist\Service\Database\Query;
 
 /**
@@ -19,7 +19,7 @@ use Kazist\Service\Database\Query;
  *
  * @author sbc
  */
-class PaymentsModel extends PaymentsModel {
+class PaymentsModel extends BasePaymentsModel {
 
     public $payment_code = '';
 
