@@ -1,13 +1,13 @@
 <?php
 
-namespace Bonus\Payments\Code\Tables;
+namespace Wallet\Payments\Code\Tables;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Bonus
+ * Wallet
  *
- * @ORM\Table(name="bonus_payments")
+ * @ORM\Table(name="wallet_payments")
  * @ORM\Entity
  * @ORM\HasLifecycleCallbacks
  */
@@ -84,7 +84,7 @@ class Payments extends \Kazist\Table\BaseTable {
      * Set title
      *
      * @param string $title
-     * @return Bonus
+     * @return Wallet
      */
     public function setTitle($title) {
         $this->title = $title;
@@ -105,7 +105,7 @@ class Payments extends \Kazist\Table\BaseTable {
      * Set user_id
      *
      * @param integer $userId
-     * @return Bonus
+     * @return Wallet
      */
     public function setUserId($userId) {
         $this->user_id = $userId;
@@ -126,7 +126,7 @@ class Payments extends \Kazist\Table\BaseTable {
      * Set amount
      *
      * @param integer $amount
-     * @return Bonus
+     * @return Wallet
      */
     public function setAmount($amount) {
         $this->amount = $amount;

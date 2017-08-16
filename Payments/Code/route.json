@@ -1,42 +1,42 @@
 {
     "frontend": [{
-            "title": "Bonus Payments Return",
-            "description": "Bonus Payments Return.",
-            "controller": "Bonus\\Payments\\Code\\Controllers\\BonusController::returnAction",
-            "unique_name": "bonus.payments.return",
-            "route": "bonus/payments/return",
+            "title": "Wallet Payments Return",
+            "description": "Wallet Payments Return.",
+            "controller": "Wallet\\Payments\\Code\\Controllers\\PaymentsController::returnAction",
+            "unique_name": "wallet.payments.return",
+            "route": "wallet/payments/return",
             "permissions": "can_view, can_viewown",
             "arguments": "",
-            "keywords": "return, bonus",
+            "keywords": "return, wallet",
             "priority": "0.5",
             "changefreq": "weekly",
             "login_required": 0
 
         }, {
-            "title": "Bonus Payments Cancelled",
-            "description": "Bonus Payments Cancelled",
-            "controller": "Bonus\\Payments\\Code\\Controllers\\BonusController::cancelAction",
-            "unique_name": "bonus.payments.cancel",
-            "route": "bonus/payments/cancel",
+            "title": "Wallet Payments Cancelled",
+            "description": "Wallet Payments Cancelled",
+            "controller": "Wallet\\Payments\\Code\\Controllers\\PaymentsController::cancelAction",
+            "unique_name": "wallet.payments.cancel",
+            "route": "wallet/payments/cancel",
             "permissions": "can_view, can_viewown",
             "arguments": {
                 "id": null
             },
-            "keywords": "bonus, cancel",
+            "keywords": "wallet, cancel",
             "priority": "0.5",
             "changefreq": "weekly",
             "login_required": 0
         }, {
-            "title": "Bonus Payments Notify",
-            "description": "Bonus Payments Notify",
-            "controller": "Bonus\\Payments\\Code\\Controllers\\BonusController::notifyAction",
-            "unique_name": "bonus.payments.notify",
-            "route": "bonus/payments/notify",
+            "title": "Wallet Payments Notify",
+            "description": "Wallet Payments Notify",
+            "controller": "Wallet\\Payments\\Code\\Controllers\\PaymentsController::notifyAction",
+            "unique_name": "wallet.payments.notify",
+            "route": "wallet/payments/notify",
             "permissions": "can_view, can_viewown",
             "arguments": {
                 "id": null
             },
-            "keywords": "bonus, notify",
+            "keywords": "wallet, notify",
             "priority": "0.5",
             "changefreq": "weekly",
             "login_required": 0
@@ -44,12 +44,12 @@
     "backend": [{
             "title": "General Tasks",
             "description": "General Tasks.",
-            "controller": "Bonus\\Payments\\Code\\Controllers\\Admin\\BonusController::taskAction",
-            "unique_name": "admin.bonus.payments.task",
-            "route": "admin/bonus/payments/task",
+            "controller": "Wallet\\Payments\\Code\\Controllers\\Admin\\PaymentsController::taskAction",
+            "unique_name": "admin.wallet.payments.task",
+            "route": "admin/wallet/payments/task",
             "permissions": "can_add, can_write, can_writeown",
             "arguments": "",
-            "keywords": "bonus, task",
+            "keywords": "wallet, task",
             "priority": "0.5",
             "changefreq": "weekly",
             "login_required": 1,
@@ -58,12 +58,12 @@
                 "ADMIN": ["can_add", "can_write", "can_writeown"]
             }
         }, {
-            "title": "Bonus Payments List",
-            "description": "Management of Bonus Payments.",
-            "controller": "Bonus\\Payments\\Code\\Controllers\\Admin\\BonusController::indexAction",
+            "title": "Wallet Payments List",
+            "description": "Management of Wallet Payments.",
+            "controller": "Wallet\\Payments\\Code\\Controllers\\Admin\\PaymentsController::indexAction",
             "permissions": "can_view, can_viewown",
-            "unique_name": "admin.bonus.payments",
-            "route": "admin/bonus/payments",
+            "unique_name": "admin.wallet.payments",
+            "route": "admin/wallet/payments",
             "arguments": "",
             "keywords": "cron, list",
             "priority": "0.5",
@@ -74,11 +74,11 @@
                 "ADMIN": ["can_view", "can_viewown"]
             }
         }, {
-            "title": "Bonus Payments Detail: {{ item.name }}",
-            "description": "Bonus Payments Detail: {{ item.name }}",
-            "controller": "Bonus\\Payments\\Code\\Controllers\\Admin\\BonusController::detailAction",
-            "unique_name": "admin.bonus.payments.detail",
-            "route": "admin/bonus/payments/detail/{id}",
+            "title": "Wallet Payments Detail: {{ item.name }}",
+            "description": "Wallet Payments Detail: {{ item.name }}",
+            "controller": "Wallet\\Payments\\Code\\Controllers\\Admin\\PaymentsController::detailAction",
+            "unique_name": "admin.wallet.payments.detail",
+            "route": "admin/wallet/payments/detail/{id}",
             "permissions": "can_view, can_viewown",
             "arguments": {
                 "id": null
@@ -92,11 +92,11 @@
                 "ADMIN": ["can_view", "can_viewown"]
             }
         }, {
-            "title": "Bonus Payments Delete: {{ item.name }}",
-            "description": "Bonus Payments Delete: {{ item.name }}",
-            "controller": "Bonus\\Payments\\Code\\Controllers\\Admin\\BonusController::deleteAction",
-            "unique_name": "admin.bonus.payments.delete",
-            "route": "admin/bonus/payments/delete/{id}",
+            "title": "Wallet Payments Delete: {{ item.name }}",
+            "description": "Wallet Payments Delete: {{ item.name }}",
+            "controller": "Wallet\\Payments\\Code\\Controllers\\Admin\\PaymentsController::deleteAction",
+            "unique_name": "admin.wallet.payments.delete",
+            "route": "admin/wallet/payments/delete/{id}",
             "permissions": "can_delete, can_deleteown",
             "arguments": {
                 "id": null

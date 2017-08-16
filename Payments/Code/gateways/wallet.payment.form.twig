@@ -11,24 +11,39 @@
 
     <div class="text-center bg-green">
         <h4>
-            Your Commission. <br>
+            Your Commission is as shown below.  <br>
             Total Available Amount is {{ user.total * converter.buying|default(1) }}  {{ converter.code }}
         </h4>
     </div>
 
     <center>
-        <a class="process-payment" href="#" title="Pay with Bonus">
+        <a class="process-payment" href="#" title="Pay with Wallet">
             <button class="btn btn-success btn-flat btn-sm" type="submit">
                 <i class="fa fa-arrow-right"></i>
-                Pay with Bonus
+                Pay from Wallet
             </button>
+
         </a>
+        
+        <br>
+        <small>   
+            You can add funds by 
+            <a href="{{ generate_url('payments.deposits.add') }}">
+                <i class="fa fa-plus"></i>
+                Deposit to Wallet.
+            </a> 
+            <br>
+        </small>   
     </center>
 {% else %}
-    <div class="text-center bg-red">
-        <h4>
-            You do not have Enough Commission. <br>
-            Total Available Amount is {{ user.total * converter.buying|default(1) }} {{ converter.code }}
-        </h4>
+    <div class="no-record">
+        You Do not have money on your account. Click <b>"Deposit to Wallet"</b> in order to pay.
+        <br>
+        Total Available Amount is {{ user.total * converter.buying|default(1) }} {{ converter.code }}
+        <br>
+        <a class="btn btn-primary" href="{{ generate_url('payments.deposits.add') }}">
+            <i class="fa fa-plus"></i>
+            Deposit to Wallet
+        </a>
     </div>
 {% endif %}

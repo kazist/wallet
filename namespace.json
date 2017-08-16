@@ -1,0 +1,6 @@
+{
+    "WalletPayments": {
+        "namespace": "Wallet\\Payments",
+        "controller": "PaymentsController"
+    }
+}

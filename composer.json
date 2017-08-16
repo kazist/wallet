@@ -1,8 +1,8 @@
 {
-    "name": "kazist/bonus",
-    "description": "Kazist Bonus Manager.",
-    "keywords": ["kazist", "bonus manager"],
-    "homepage": "https://github.com/kazist/bonus",
+    "name": "kazist/wallet",
+    "description": "Kazist Wallet Manager.",
+    "keywords": ["kazist", "wallet manager"],
+    "homepage": "https://github.com/kazist/wallet",
     "license": "LGPL-3.0",
     "version": "1.0.0",
     "authors": [

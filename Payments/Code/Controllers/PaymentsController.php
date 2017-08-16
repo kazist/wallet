@@ -8,16 +8,16 @@
  */
 
 /**
- * Description of BonusController
+ * Description of PaymentsController
  *
  * @author sbc
  */
 
-namespace Bonus\Payments\Code\Controllers;
+namespace Wallet\Payments\Code\Controllers;
 
 defined('KAZIST') or exit('Not Kazist Framework');
 
-use Bonus\Payments\Code\Models\BonusModel;
+use Wallet\Payments\Code\Models\PaymentsModel;
 use Payments\Payments\Code\Controllers\PaymentsController AS BasePaymentsController;
 
 class PaymentsController extends BasePaymentsController {
@@ -26,7 +26,7 @@ class PaymentsController extends BasePaymentsController {
 
         $payment_id = $this->request->query->get('payment_id');
 
-        $this->model = new BonusModel();
+        $this->model = new PaymentsModel();
         $this->model->notificationTransaction($payment_id);
         $payment_url = $this->model->getUrlByPaymentId($payment_id);
 
@@ -37,7 +37,7 @@ class PaymentsController extends BasePaymentsController {
 
         $payment_id = $this->request->query->get('payment_id');
 
-        $this->model = new BonusModel();
+        $this->model = new PaymentsModel();
         $this->model->completeTransaction($payment_id);
         $payment_url = $this->model->getUrlByPaymentId($payment_id);
 
@@ -48,7 +48,7 @@ class PaymentsController extends BasePaymentsController {
 
         $payment_id = $this->request->query->get('payment_id');
 
-        $this->model = new BonusModel();
+        $this->model = new PaymentsModel();
         $this->model->cancelTransaction($payment_id);
         $payment_url = $this->model->getUrlByPaymentId($payment_id);
 

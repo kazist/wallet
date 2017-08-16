@@ -1,3 +1,3 @@
-# bonus
+# wallet
  
-This is a bonus application
+This is a wallet application

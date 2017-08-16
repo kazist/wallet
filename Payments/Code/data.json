@@ -2,13 +2,13 @@
 [{
         "_table_name": "payments_gateways",
         "tracking_id": "11",
-        "short_name": "bonus",
-        "long_name": "Bonus",
-        "input_label": "Bonus",
+        "short_name": "wallet",
+        "long_name": "Wallet",
+        "input_label": "Wallet",
         "can_withdraw": "0",
         "can_payment": "1",
         "can_transfer": "0",
-        "payment_instruction": "To complete your Payment click the Bonus button below and make a payment of {{ payment.amount }} USD. <br> {{ payment_form }}",
+        "payment_instruction": "To complete your Payment click the Wallet button below and make a payment of <b>{{ gateway.total_amount }} USD</b>. <br> {{ payment_form }}",
         "transfer_instruction": "",
         "withdraw_instruction": "",
         "withdraw_file_prefix": "",
@@ -16,8 +16,8 @@
         "withdraw_file_suffix": "",
         "file_type": "csv",
         "file_limit": "2000",
-        "form_path": "Bonus/Payments/Code/gateways",
-        "url": "{{ web_base }}/finance/payments/bonus/notify?payment_id={{ payment.id}}",
+        "form_path": "Wallet/Payments/Code/gateways",
+        "url": "{{ web_base }}/wallet/payments/notify?payment_id={{ payment.id}}",
         "published": "1"
     }]
 

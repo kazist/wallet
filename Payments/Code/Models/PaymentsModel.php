@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace Bonus\Payments\Code\Models;
+namespace Wallet\Payments\Code\Models;
 
 defined('KAZIST') or exit('Not Kazist Framework');
 
@@ -23,6 +23,12 @@ class PaymentsModel extends BasePaymentsModel {
 
     public $payment_code = '';
 
+    public function appendSearchQuery($query) {
+
+        $this->ingore_search_query = true;
+        return parent:: appendSearchQuery($query);
+    }
+
     public function notificationTransaction($payment_id) {
 
         $this->completeTransaction($payment_id);
@@ -30,9 +36,9 @@ class PaymentsModel extends BasePaymentsModel {
 
     public function completeTransaction($payment_id) {
 
-        $process_bonus = $this->processBonusPayment($payment_id);
+        $process_wallet = $this->processWalletPayment($payment_id);
 
-        if ($process_bonus) {
+        if ($process_wallet) {
             parent::successfulTransaction($payment_id, $this->payment_code);
         } else {
             parent::failTransaction($payment_id, $this->payment_code);
@@ -43,10 +49,12 @@ class PaymentsModel extends BasePaymentsModel {
         parent::cancelTransaction($payment_id);
     }
 
-    public function processBonusPayment($payment_id) {
+    public function processWalletPayment($payment_id) {
 
         $factory = new KazistFactory();
+        $user = $factory->getUser();
 
+        $gateway = $this->getGatewayByName('wallet');
         $payment = $this->getPaymentById($payment_id);
         $deductions = json_decode($payment->deductions);
         $this->payment_code = $payment->receipt_no;
@@ -54,6 +62,27 @@ class PaymentsModel extends BasePaymentsModel {
         $total_earning = $this->getUserTotalEarning($payment);
 
         if ($total_earning >= $deductions->amount) {
+
+            $payment_obj = new \stdClass();
+            $payment_obj->id = $payment->id;
+            $payment_obj->code = $payment->receipt_no;
+            $payment_obj->receipt_no = $payment->receipt_no;
+            $payment_obj->type = 'wallet';
+            $payment_obj->gateway_id = $gateway->id;
+            $factory->saveRecord('#__payments_payments', $payment_obj);
+
+
+            $data_obj = new \stdClass();
+            $data_obj->user_id = $user->id;
+            $data_obj->behalf_user_id = $payment->user_id;
+            $data_obj->item_id = $payment->item_id;
+            $data_obj->payment_id = $payment->id;
+            $data_obj->description = 'Deduction for; ' . $payment->description;
+            $data_obj->debit = $payment->amount;
+            $data_obj->type = 'wallet';
+            $data_obj->source = 'payment';
+            $factory->saveRecord('#__payments_transactions', $data_obj);
+
             return true;
         } else {
             return false;

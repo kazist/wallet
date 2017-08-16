@@ -8,12 +8,12 @@
  */
 
 /**
- * Description of BonusController
+ * Description of PaymentsController
  *
  * @author sbc
  */
 
-namespace Bonus\Payments\Code\Controllers\Admin;
+namespace Wallet\Payments\Code\Controllers\Admin;
 
 defined('KAZIST') or exit('Not Kazist Framework');
 
