@@ -69,6 +69,8 @@ class PaymentsModel extends BasePaymentsModel {
             $payment_obj->receipt_no = $payment->receipt_no;
             $payment_obj->type = 'wallet';
             $payment_obj->gateway_id = $gateway->id;
+            $payment_obj->amount_required = $deductions->amount;
+            $payment_obj->amount_paid = $deductions->amount;
             $factory->saveRecord('#__payments_payments', $payment_obj);
 
 
