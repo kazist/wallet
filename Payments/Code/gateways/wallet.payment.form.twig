@@ -12,7 +12,7 @@
     <div class="text-center bg-green">
         <h4>
             Your Commission is as shown below.  <br>
-            Total Available Amount is {{ user.total * converter.buying|default(1) }}  {{ converter.code }}
+            Total Available Amount is {{ (user.total * converter.buying|default(1))|number_format(2) }}  {{ converter.code }}
         </h4>
     </div>
 

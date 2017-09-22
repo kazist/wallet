@@ -73,7 +73,6 @@ class PaymentsModel extends BasePaymentsModel {
             $payment_obj->amount_paid = $deductions->amount;
             $factory->saveRecord('#__payments_payments', $payment_obj);
 
-
             $data_obj = new \stdClass();
             $data_obj->user_id = $user->id;
             $data_obj->behalf_user_id = $payment->user_id;
