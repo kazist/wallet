@@ -37,7 +37,7 @@ class PaymentsModel extends BasePaymentsModel {
     public function completeTransaction($payment_id) {
 
         $process_wallet = $this->processWalletPayment($payment_id);
-
+        
         if ($process_wallet) {
             parent::successfulTransaction($payment_id, $this->payment_code);
         } else {
